@@ -8,7 +8,7 @@
     <meta content="Dylan Seba's personal website - Junior Undergraduate at Michigan State University studying Information Science" name="description">
     <meta name="google" content="notranslate" />
     <meta content="Website created by Dylan Seba" name="author">
-    
+
     <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
@@ -38,7 +38,6 @@
             top: 0;
             width: 100%;
             z-index: 100;
-            transition: background-color 0.3s ease-in-out; /* Smooth transition for header */
         }
 
         .navbar {
@@ -84,7 +83,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: background-color 0.3s ease-in-out; /* Smooth transition for hero section */
         }
 
         .hero-full-container .overlay-gradient {
@@ -94,7 +92,6 @@
             width: 100%;
             top: 0;
             left: 0;
-            transition: opacity 0.3s ease-in-out;
         }
 
         .hero-full-container .text-content h1 {
@@ -102,7 +99,6 @@
             font-weight: 700;
             margin-bottom: 20px;
             color: #D1E8E2; /* Lighter Green for name */
-            transition: transform 0.5s ease-in-out;
         }
 
         .hero-full-container .text-content p {
@@ -110,7 +106,6 @@
             line-height: 1.6;
             margin-top: 20px;
             max-width: 600px;
-            transition: opacity 0.3s ease-in-out;
         }
 
         .hero-image-wrapper {
@@ -121,19 +116,15 @@
             width: 250px; /* Larger width */
             height: 250px; /* Larger height */
             margin-left: 50px;
+            border-radius: 50%; /* Circle shape */
+            border: 5px solid #D1E8E2;
+            overflow: hidden; /* Ensures the image is cut off into a circle */
         }
 
         .hero-image-wrapper img {
-            border-radius: 50%;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border: 5px solid #D1E8E2;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .hero-image-wrapper img:hover {
-            transform: scale(1.1); /* Zoom effect on hover */
+            object-fit: cover; /* Ensures the image fills the circle without stretching */
         }
 
         /* Footer */
@@ -194,13 +185,13 @@
                         <div class="text-content">
                             <h1>Dylan Seba</h1>
                             <p>
-                                Hello! My name is Dylan Seba, and I am a Junior Undergraduate student at Michigan State University. I am currently pursuing a degree in Information Science, where I explore the intersection of technology, design, and user experience. I have a deep passion for developing innovative solutions, leveraging my skills in design and technology to make meaningful impacts. Whether it's coding, creating user-centered designs, or working on projects that push the envelope of what's possible, I am always excited to learn and grow in this fast-evolving field.
+                                Hi there! I'm Dylan Seba, a Junior Undergraduate student at Michigan State University. I'm pursuing a degree in Information Science, where I focus on technology, design, and user experience. I have a passion for creating innovative solutions through coding, design, and problem-solving. Whether it's building websites, developing apps, or exploring new technologies, I love using my skills to make a positive impact. Welcome to my personal website, where you can explore more about my work and projects.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Space for your profile image -->
+                <!-- Profile Image -->
                 <div class="col-xs-12 col-md-3 hero-image-wrapper">
                     <img src="./assets/images/your-image.jpg" alt="Dylan Seba">
                 </div>
@@ -249,4 +240,3 @@
 </body>
 
 </html>
-
