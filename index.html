@@ -14,14 +14,17 @@
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
     <link href="./assets/favicon.ico" rel="icon">
-    
+
     <title>Dylan Seba - Junior Undergraduate at MSU</title>
+
+    <!-- Importing a techy font (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link href="./main.3da94fde.css" rel="stylesheet">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #F4F4F4;
             color: #333;
         }
@@ -30,19 +33,47 @@
         header {
             background-color: #18453B; /* Spartan Green */
             color: white;
+            padding: 20px 0;
         }
 
         .navbar {
             background-color: #18453B; /* Spartan Green */
             border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar a {
             color: white;
+            font-weight: bold;
+            font-size: 16px;
         }
 
         .navbar a:hover {
             color: #D1E8E2; /* Light Green Accent */
+        }
+
+        .navbar .navbar-toggle {
+            border: 1px solid white;
+        }
+
+        .navbar .navbar-toggle .icon-bar {
+            background-color: white;
+        }
+
+        .navbar-fullscreen-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-fullscreen-links li {
+            margin: 0 20px;
+        }
+
+        .navbar-fullscreen-links a {
+            text-transform: uppercase;
         }
 
         /* Hero Section Styling */
@@ -53,10 +84,11 @@
             background-size: cover;
             background-position: center;
             padding: 100px 0;
+            position: relative;
         }
 
         .hero-full-container .overlay-gradient {
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5);
             height: 100%;
             position: absolute;
             width: 100%;
@@ -65,116 +97,23 @@
         }
 
         .hero-full-container .text-content h1 {
-            font-size: 3em;
-            font-weight: bold;
+            font-size: 3.5em;
+            font-weight: 700;
             margin-bottom: 20px;
+            color: #D1E8E2; /* Lighter Green for name */
         }
 
         .hero-full-container .text-content p {
             font-size: 1.2em;
             line-height: 1.6;
+            margin-top: 20px;
+            max-width: 600px;
         }
 
-        /* Footer */
-        .footer-container {
-            background-color: #18453B; /* Spartan Green */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+        .hero-image-wrapper {
+            display: flex;
+            align-items: center;
 
-        .footer-container p {
-            font-size: 0.9em;
-        }
-
-        .footer-share-icons a {
-            color: white;
-            margin: 0 10px;
-        }
-
-        .footer-share-icons a:hover {
-            color: #D1E8E2; /* Light Green Accent */
-        }
-    </style>
-
-</head>
-
-<body>
-    <!-- Header -->
-    <header>
-        <nav class="navbar navbar-fixed-top navbar-default">
-            <div class="container">
-                <button type="button" class="navbar-toggle">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <nav class="navbar-fullscreen" id="navbar-middle">
-                    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <ul class="navbar-fullscreen-links">
-                        <li><a href="./index.html" title="">Home</a></li>
-                        <li><a href="./project.html" title="">Projects</a></li>
-                        <li><a href="./about.html" title="">About Me</a></li>
-                        <li><a href="./components.html" title="">Components</a></li>
-                    </ul>
-                    <div class="footer-container">
-                        <p><small>© Dylan Seba | Website created with <a href="http://www.mashup-template.com/" title="Create website with free html template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
-                        <p class="footer-share-icons">
-                            <a href="https://www.twitter.com" class="fa-icon" title="Twitter">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com" class="fa-icon" title="LinkedIn">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.instagram.com" class="fa-icon" title="Instagram">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.behance.com" class="fa-icon" title="Behance">
-                                <i class="fa fa-behance" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.vimeo.com" class="fa-icon" title="Vimeo">
-                                <i class="fa fa-vimeo" aria-hidden="true"></i>
-                            </a>
-                        </p>
-                    </div>
-                </nav>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <div class="hero-full-container">
-        <div class="overlay-gradient"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-7 col-md-offset-1">
-                    <div class="hero-full-wrapper">
-                        <div class="text-content">
-                            <h1>Dylan Seba</h1>
-                            <p>Junior Undergraduate student at Michigan State University, studying Information Science. Passionate about technology and design.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            navbarFixedTopAnimation();
-            closeMenuBeforeGoingToPage();
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function (event) {
-            navbarToggleSidebar();
-            closeMenuBeforeGoingToPage();
-            navActivePage();
-        });
-    </script>
 
     <script type="text/javascript" src="./main.4c6e144e.js"></script>
 </body>
