@@ -293,12 +293,13 @@
     <script>
         // Toggle the navbar on and off for mobile screens
         function toggleNavbar() {
-            var navbar = document.querySelector('.navbar');
-            navbar.classList.toggle('open');
+            var navbar = document.querySelector('.navbar-fullscreen');
+            navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
         }
     </script>
 </body>
 
 </html>
+
 
 
