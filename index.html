@@ -9,7 +9,7 @@
     <meta name="google" content="notranslate" />
     <meta content="Website created by Dylan Seba" name="author">
     
-    
+    <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
@@ -21,9 +21,11 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif, Helvetica; 
+            font-family: Arial, sans-serif, Helvetica; /* Default system fonts for professional look */
             background-color: #F4F4F4;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         /* Header Styling */
@@ -31,46 +33,42 @@
             background-color: #18453B; /* Spartan Green */
             color: white;
             padding: 20px 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            transition: background-color 0.3s ease-in-out; /* Smooth transition for header */
         }
 
         .navbar {
-            background-color: #18453B; /* Spartan Green */
+            background-color: transparent;
             border: none;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
         }
 
         .navbar a {
             color: white;
             font-weight: bold;
             font-size: 16px;
+            text-transform: uppercase;
+            margin: 0 15px;
+            transition: color 0.3s ease;
         }
 
         .navbar a:hover {
             color: #D1E8E2; /* Light Green Accent */
         }
 
-        .navbar .navbar-toggle {
+        .navbar-toggle {
             border: 1px solid white;
         }
 
-        .navbar .navbar-toggle .icon-bar {
+        .navbar-toggle .icon-bar {
             background-color: white;
-        }
-
-        .navbar-fullscreen-links {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar-fullscreen-links li {
-            margin: 0 20px;
-        }
-
-        .navbar-fullscreen-links a {
-            text-transform: uppercase;
         }
 
         /* Hero Section Styling */
@@ -82,6 +80,11 @@
             background-position: center;
             padding: 100px 0;
             position: relative;
+            height: 100vh; /* Full screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease-in-out; /* Smooth transition for hero section */
         }
 
         .hero-full-container .overlay-gradient {
@@ -91,13 +94,15 @@
             width: 100%;
             top: 0;
             left: 0;
+            transition: opacity 0.3s ease-in-out;
         }
 
         .hero-full-container .text-content h1 {
-            font-size: 3.5em;
+            font-size: 4em;
             font-weight: 700;
             margin-bottom: 20px;
             color: #D1E8E2; /* Lighter Green for name */
+            transition: transform 0.5s ease-in-out;
         }
 
         .hero-full-container .text-content p {
@@ -105,21 +110,30 @@
             line-height: 1.6;
             margin-top: 20px;
             max-width: 600px;
+            transition: opacity 0.3s ease-in-out;
         }
 
         .hero-image-wrapper {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 250px; /* Larger width */
+            height: 250px; /* Larger height */
+            margin-left: 50px;
         }
 
         .hero-image-wrapper img {
-            border-radius: 50%; /* Circular image */
-            width: 200px;
-            height: 200px;
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border: 5px solid #D1E8E2;
-            margin-left: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hero-image-wrapper img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
         }
 
         /* Footer */
@@ -137,6 +151,7 @@
         .footer-share-icons a {
             color: white;
             margin: 0 10px;
+            font-size: 20px;
         }
 
         .footer-share-icons a:hover {
@@ -234,3 +249,4 @@
 </body>
 
 </html>
+
