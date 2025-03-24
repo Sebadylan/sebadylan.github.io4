@@ -22,7 +22,7 @@
     <style>
         body {
             font-family: Arial, sans-serif, Helvetica;
-            background-color: #F4F4F4;
+            background-color: #FAF9F6; /* Creamy white background */
             color: #333;
             margin: 0;
             padding: 0;
@@ -201,6 +201,25 @@
             color: #D1E8E2;
         }
 
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: transparent;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #D1E8E2;
+        }
+
         /* Media Queries for Mobile */
         @media (max-width: 768px) {
             .navbar-toggle {
@@ -225,7 +244,7 @@
             </button>
 
             <div class="navbar-fullscreen">
-                <button class="back-button" onclick="goBack()">&lt; Back</button>
+                <button class="back-button" onclick="goHome()">Back to Home</button>
                 <ul class="navbar-fullscreen-links">
                     <li><a href="./index.html" title="Go to Home Page">Home</a></li>
                     <li><a href="./project.html" title="See My Projects">Projects</a></li>
@@ -288,12 +307,12 @@
             var body = document.querySelector('body');
             navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
             navbar.style.opacity = navbar.style.display === "flex" ? "1" : "0";
-            body.style.backgroundColor = navbar.style.display === "flex" ? "#333" : "#F4F4F4";
+            body.style.backgroundColor = navbar.style.display === "flex" ? "#333" : "#FAF9F6";
         }
 
-        // Function to go back to the previous page
-        function goBack() {
-            window.history.back();
+        // Function to go back to the home page
+        function goHome() {
+            window.location.href = "./index.html";
         }
     </script>
 </body>
