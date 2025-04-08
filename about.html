@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="Dylan Seba's About Page - Information Science student at Michigan State University" name="description">
+  <meta content="Dylan Seba's About Me Page" name="description">
   <meta name="google" content="notranslate" />
   <meta content="Website created by Dylan Seba" name="author">
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
-  
-  <title>About Me - Dylan Seba</title>  
+  <title>About Me - Dylan Seba</title>
 
   <link href="./main.3da94fde.css" rel="stylesheet">
-
   <style>
+    /* Custom styles to ensure consistency with your other pages */
     body {
-      font-family: Arial, sans-serif, Helvetica;
-      background-color: #FAF9F6; /* Creamy white background */
+      font-family: Arial, sans-serif;
+      background-color: #FAF9F6;
       color: #333;
       margin: 0;
       padding: 0;
-      transition: background-color 0.3s ease;
     }
 
-    /* Header Styling */
     header {
       background-color: #18453B; /* Spartan Green */
       color: white;
       padding: 20px 0;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
       width: 100%;
@@ -46,7 +36,6 @@
       border: none;
       display: flex;
       justify-content: space-between;
-      align-items: center;
       padding: 0 30px;
       font-family: Arial, sans-serif, Helvetica;
     }
@@ -55,8 +44,8 @@
       color: white;
       font-weight: bold;
       font-size: 16px;
-      text-transform: uppercase;
       margin: 0 15px;
+      text-transform: uppercase;
       transition: color 0.3s ease;
     }
 
@@ -64,96 +53,44 @@
       color: #D1E8E2;
     }
 
-    /* Hero Section */
     .hero-full-container {
-      background-color: #9C9F8D; /* Sage Green */
+      background-color: #18453B;
       color: white;
       padding: 100px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      margin-bottom: 40px;
     }
 
     .hero-full-container h1 {
       font-size: 3em;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero-full-container p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin-top: 20px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* About Section */
-    .about-section {
-      padding: 50px 20px;
-      text-align: center;
-      background-color: #FAF9F6; /* Creamy white background */
-    }
-
-    .about-section h2 {
-      font-size: 2.5em;
-      color: #18453B; /* Spartan Green */
-      margin-bottom: 30px;
-    }
-
-    .about-section p {
-      font-size: 1.1em;
-      line-height: 1.7;
-      max-width: 800px;
-      margin: 0 auto 30px;
-      color: #333;
     }
 
     .image-gallery {
       display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-    }
-
-    .image-gallery div {
-      width: 22%;
-      height: 200px;
-      background-color: #D1E8E2; /* Light Pastel Green */
-      border-radius: 10px;
-      overflow: hidden;
+      justify-content: space-around;
+      padding: 40px;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     .image-gallery img {
-      width: 100%;
-      height: 100%;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
     }
 
-    /* Footer */
-    .footer-container {
-      background-color: #18453B; /* Spartan Green */
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .footer-container p {
-      font-size: 0.9em;
-    }
-
-    .footer-share-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 20px;
-    }
-
-    .footer-share-icons a:hover {
-      color: #D1E8E2;
+    .image-gallery img:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
-
 <body>
+
   <!-- Header -->
   <header>
     <nav class="navbar">
@@ -166,55 +103,41 @@
 
   <!-- Hero Section -->
   <div class="hero-full-container">
-    <h1>Dylan Seba</h1>
-    <p>I am a current Information Science student at Michigan State University. Passionate about technology, music, and plants. Welcome to my personal page!</p>
-  </div>
-
-  <!-- About Section -->
-  <div class="about-section">
-    <h2>About Me</h2>
-    <p>Hi! I'm Dylan Seba, and I'm currently pursuing my degree in Information Science at Michigan State University. My love for technology has led me to explore a variety of fields, including web development, AI, and data science. When I'm not diving into tech, you can find me enjoying music, tending to my plants, or exploring new creative projects!</p>
-    
-    <!-- Image Gallery -->
-    <div class="image-gallery">
-      <div>
-        <img src="path/to/image1.jpg" alt="Image 1">
-      </div>
-      <div>
-        <img src="path/to/image2.jpg" alt="Image 2">
-      </div>
-      <div>
-        <img src="path/to/image3.jpg" alt="Image 3">
-      </div>
-      <div>
-        <img src="path/to/image4.jpg" alt="Image 4">
-      </div>
+    <div>
+      <h1>Dylan Seba</h1>
+      <p>Information Science Student at Michigan State University</p>
     </div>
   </div>
 
-  <!-- Footer -->
-  <div class="footer-container">
-    <p><small>© Dylan Seba | Website created with <a href="http://www.mashup-template.com/" title="Create website with free HTML template">Mashup Template</a>/<a href="https://www.unsplash.com/" title="Beautiful Free Images">Unsplash</a></small></p>
-    <p class="footer-share-icons">
-      <a href="https://www.twitter.com" title="Twitter">
-        <i class="fa fa-twitter" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.linkedin.com" title="LinkedIn">
-        <i class="fa fa-linkedin" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.instagram.com" title="Instagram">
-        <i class="fa fa-instagram" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.behance.com" title="Behance">
-        <i class="fa fa-behance" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.vimeo.com" title="Vimeo">
-        <i class="fa fa-vimeo" aria-hidden="true"></i>
-      </a>
+  <!-- About Me Content -->
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm Dylan Seba! I'm currently an undergraduate student at Michigan State University, studying Information Science. I'm passionate about technology, music, and plants. I enjoy exploring new technologies, solving complex problems, and staying creative through my hobbies.
     </p>
+
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <div>
+        <img src="path/to/W1.jpg" alt="Plant & Kitty">
+        <p>My Monstera & Mischevious Kitty</p>
+      </div>
+      <div>
+        <img src="path/to/W2.jpg" alt="Me and my Boyfriend">
+        <p>Halloween!</p>
+      </div>
+      <div>
+        <img src="path/to/W3.jpg" alt="Me with Flowers">
+        <p>I love flowers</p>
+      </div>
+      <div>
+        <img src="path/to/W4.jpg" alt="Lox Toast I made!">
+        <p>Yum!</p>
+      </div>
+    </div>
+
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <script src="./main.4c6e144e.js"></script>
 </body>
-
 </html>
