@@ -18,41 +18,121 @@
   <title>Dylan Seba - Projects</title>  
 
   <link href="./main.3da94fde.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #F1F1F1;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3E8E41; /* Green background */
+      color: white;
+      padding: 20px 0;
+    }
+
+    header .navbar {
+      text-align: center;
+    }
+
+    header .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .hero-full-container {
+      background-color: #3E8E41; /* Green background */
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+      margin-bottom: 40px;
+    }
+
+    .section-container {
+      padding: 40px 20px;
+      background-color: white;
+    }
+
+    .section-container h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .project-card {
+      background-color: #F6D1C1; /* Pastel pink */
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .project-card h3 {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .project-image-placeholder {
+      background-color: #D4E1C1; /* Pastel green */
+      color: #333;
+      padding: 40px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .resume-section {
+      background-color: #D4E1C1; /* Pastel green */
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .footer-container {
+      background-color: #3E8E41; /* Green footer */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer-container a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .navbar-nav {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar-nav li {
+      margin: 0 10px;
+    }
+
+  </style>
 </head>
 
 <body>
   <!-- Header -->
   <header>
     <nav class="navbar">
-      <button class="navbar-toggle" onclick="toggleNavbar()">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-
-      <div class="navbar-fullscreen">
-        <button class="back-button" onclick="goHome()">Back to Home</button>
-        <ul class="navbar-fullscreen-links">
-          <li><a href="./index.html" title="Go to Home Page">Home</a></li>
-          <li><a href="./project.html" title="See My Projects">Projects</a></li>
-          <li><a href="./about.html" title="Learn About Me">About Me</a></li>
-          <li><a href="./components.html" title="Check Out My Components">Components</a></li>
-        </ul>
-      </div>
+      <a href="./index.html">Home</a>
+      <a href="./project.html">Projects</a>
+      <a href="./about.html">About Me</a>
+      <a href="./components.html">Components</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <div class="hero-full-container" style="background-image:url('./assets/images/img-08.jpg')">
-    <div class="overlay-gradient"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <h1>Projects</h1>
-          <p>Explore my past and future projects. More to come!</p>
-        </div>
-      </div>
-    </div>
+  <div class="hero-full-container">
+    <h1>Projects</h1>
+    <p>Explore my past and future projects. More to come!</p>
   </div>
 
   <!-- Projects Section -->
@@ -61,34 +141,34 @@
       <div class="row">
         <!-- Project 1 -->
         <div class="col-md-4">
-          <div class="project-card" style="background-color: #F6D1C1;"> <!-- Pastel Pink -->
+          <div class="project-card">
             <div class="project-image-placeholder">
               <p>Future Project Image</p>
             </div>
             <h3>Project Title</h3>
-            <p>Description for future project.</p>
+            <p>Brief description of the project.</p>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div class="col-md-4">
-          <div class="project-card" style="background-color: #D4E1C1;"> <!-- Pastel Green -->
+          <div class="project-card">
             <div class="project-image-placeholder">
               <p>Future Project Image</p>
             </div>
             <h3>Project Title</h3>
-            <p>Description for future project.</p>
+            <p>Brief description of the project.</p>
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="col-md-4">
-          <div class="project-card" style="background-color: #C1D4E1;"> <!-- Pastel Blue -->
+          <div class="project-card">
             <div class="project-image-placeholder">
               <p>Future Project Image</p>
             </div>
             <h3>Project Title</h3>
-            <p>Description for future project.</p>
+            <p>Brief description of the project.</p>
           </div>
         </div>
       </div>
@@ -96,7 +176,7 @@
       <!-- Resume Section -->
       <div class="row">
         <div class="col-md-12">
-          <div class="resume-section" style="background-color: #F1C1D4;"> <!-- Pastel Pink -->
+          <div class="resume-section">
             <h3>My Resume</h3>
             <div class="resume-placeholder">
               <p>Resume Placeholder</p>
@@ -130,23 +210,6 @@
       </a>
     </p>
   </div>
-
-  <script>
-    // Toggle the navbar on and off for mobile screens
-    function toggleNavbar() {
-      var navbar = document.querySelector('.navbar-fullscreen');
-      var body = document.querySelector('body');
-      navbar.style.display = (navbar.style.display === "flex") ? "none" : "flex";
-      navbar.style.opacity = navbar.style.display === "flex" ? "1" : "0";
-      body.style.backgroundColor = navbar.style.display === "flex" ? "#333" : "#FAF9F6";
-    }
-
-    // Function to go back to the home page
-    function goHome() {
-      window.location.href = "./index.html";
-    }
-  </script>
-
 </body>
 
 </html>
